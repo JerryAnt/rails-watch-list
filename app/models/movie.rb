@@ -1,8 +1,10 @@
 class Movie < ApplicationRecord
-  belongs_to :list, through: :bookmark
-  has_many :bookmarks
+  ## has a title, title is unique, title cannot be blank
   validates :title, uniqueness: true, presence: true
+  ## has an overview, overview cannot be blank
   validates :overview, presence: true
-  validates :list, uniqueness: true
-  validates :comment, length: { minimum: 2 }
+  # has many bookmarks
+  has_many :bookmarks
+  # should not be able to destroy self if has bookmarks children
+  has_many :lists, through: :bookmark
 end
