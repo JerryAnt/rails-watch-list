@@ -3,3 +3,8 @@
 
 const channels = require.context('.', true, /_channel\.js$/)
 channels.keys().forEach(channels)
+
+
+
+// Api for the movie database
+//  http://tmdb.lewagon.com/movie/top_rated
