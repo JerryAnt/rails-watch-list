@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   # A user can delete a bookmark from a list.
   # DELETE "bookmarks/25"
   # -> so we have bookmarks#destroy
-    resources :bookmarks, only: [:new, :create, :destroy]
+    resources :bookmarks, only: [:new, :create]
   end
+  resources :bookmarks, only: :destroy
 end

@@ -1,6 +1,11 @@
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :movie_id %>
-  <%= f.input :list_id %>
+<%= simple_form_for @bookmark do |f| %>
   <%= f.input :comment %>
-  <%= f.submit %>
-< end >
+
+  <%= f.association :lists %>
+
+  <%= f.association :movies %>
+
+  <%= f.button :submit %>
+
+  <!-- LOOK AT f.association on https://github.com/heartcombo/simple_form#associations -->
+<% end %>
