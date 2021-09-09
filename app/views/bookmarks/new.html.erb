@@ -1,11 +1,17 @@
-<%= simple_form_for @bookmark do |f| %>
-  <%= f.input :comment %>
+<% simple_form_for ([@list, @bookmark]) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <%= f.association :lists %>
+  <div class="form_inputs">
+    <%= f.input :comment %>
+<!-- LOOK AT f.association on https://github.com/heartcombo/simple_form#associations -->
+    <%= f.association :list, as: :select %>
+    <%= f.association :movie, as: :select %>
 
-  <%= f.association :movies %>
+  </div>
 
-  <%= f.button :submit %>
+  <div class="form_actions">
+    <%= f.submit "add the movie" %>
+  </div>
 
-  <!-- LOOK AT f.association on https://github.com/heartcombo/simple_form#associations -->
 <% end %>

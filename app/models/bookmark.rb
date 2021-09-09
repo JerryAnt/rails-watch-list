@@ -11,9 +11,8 @@ class Bookmark < ApplicationRecord
   validates :list_id, allow_blank: false, presence: true
 
   # is unique for a given movie/list couple
-  validates :list_id, uniqueness: { scope: :movie_id}
-# When you delete a list, you should delete all associated bookmarks
-# (but not the movies as they can be referenced in other lists).
-# delete list bookmarks deleted  not movie
-
+  validates :list_id, uniqueness: { scope: :movie_id }
+  # When you delete a list, you should delete all associated bookmarks
+  # (but not the movies as they can be referenced in other lists).
+  # delete list bookmarks deleted  not movie
 end
