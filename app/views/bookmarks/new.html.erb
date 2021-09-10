@@ -1,13 +1,13 @@
-<% simple_form_for ([@list, @bookmark]) do |f| %>
+<%= simple_form_for ([@list, @bookmark]) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form_inputs">
-    <%= f.input :comment %>
+
 <!-- LOOK AT f.association on https://github.com/heartcombo/simple_form#associations -->
     <%= f.association :list, as: :select %>
-    <%= f.association :movie, as: :select %>
-
+    <%= f.association :movie %>
+    <%= f.input :comment %>
   </div>
 
   <div class="form_actions">
@@ -15,3 +15,5 @@
   </div>
 
 <% end %>
+
+<%= link_to "cancel", list_path(@list) %>

@@ -7,6 +7,7 @@ class List < ApplicationRecord
   validates :name, uniqueness: true, presence: true
 
   # has many movies through bookmark
+  # reason to why we can write @list.movies
   has_many :movies, through: :bookmarks
 end
 
