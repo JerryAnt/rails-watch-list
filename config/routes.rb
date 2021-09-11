@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # GET "lists"
   # A user can see the details of a given list and its name
   # A user can create a new list
+  root to: "lists#index"
   resources :lists, only: [:index, :show, :new, :create] do
 
   # A user can add a new bookmark (movie/list pair) to an existing list
