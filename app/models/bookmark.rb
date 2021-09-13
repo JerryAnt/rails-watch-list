@@ -1,4 +1,6 @@
 class Bookmark < ApplicationRecord
+  #should be able to upload a photo from the form
+  has_one_attached :picture
   # has a comment and comment cannot be shorter than 6 characters
   validates :comment, presence: true, length: { minimum: 6 }
   # belongs to a movie

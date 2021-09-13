@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: black;
+  color: $yellow
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +10,37 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.dropdown-menu {
+  background-color: $yellow;
+
+  & :hover{
+background-color: $black;
+color: $yellow;
+  }
+
+
+}
+
+.slogan {
+  text-align: center;
+  position: relative;
+
+h1 {
+  border: $yellow solid 3px;
+  border-radius: 10px;
+
+}
+}
+
+.fa-bars {
+  font-size: 50px;
+
+}
+
+.dropdown {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5px;
 }

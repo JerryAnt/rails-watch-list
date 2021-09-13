@@ -1,5 +1,42 @@
-<%= simple_form_for @list do |f| %>
-<%= f.input :name %>
-<%= f.button :submit %>
-<%= link_to "back", lists_path %>
-<% end %>
+
+<!-- nav bar -->
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <!-- mettre une image de tele -->
+  <a class="navbar-brand" href="https://unsplash.com/photos/J39X2xX_8CQ"></a>
+  <div class="slogan">
+    <h3>Not as big as </h3>
+    <h1>IMDB</h1>
+    <p>but we're workin' on it</p>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- navbar-collapse -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Messages</a>
+      </li>
+      <li class="nav-item dropdown">
+        <!-- avatar -->
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="" />
+        <!-- avatar end-->
+        <!-- dropdown -->
+    <!--  -->
+        <!-- dropdown end-->
+      </li>
+     </ul>
+  </div>
+</div>
+<!-- form -->
+  <div class="form">
+    <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit %>
+    <%= link_to "back", lists_path %>
+    <% end %>
+  </div>
+<!-- form end -->
