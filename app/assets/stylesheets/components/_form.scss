@@ -2,7 +2,6 @@
   margin-right: 25%;
   margin-left: 25%;
   margin-top:10%;
-  margin-bottom:10%;
   width: 50%;
   height: 50%;
     border: $yellow solid 3px;
@@ -13,8 +12,21 @@
   color: $yellow;
 }
 
-.add-cancel {
-  margin:10px;
-  border-radius: 8px;
+.add, .cancel {
+  margin-left:5%;
+  margin-right:5%;
 }
 
+.add-cancel {
+  border-radius: 8px;
+  margin-bottom:25%;
+}
+
+.user-form{
+  border: black solid 1px;
+}
+
+.form_actions{
+margin: 5%;
+
+}
