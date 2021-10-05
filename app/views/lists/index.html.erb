@@ -1,3 +1,7 @@
+
+
+
+
 <div>
   <h1> Save any kind of movies </h1>
 </div>
@@ -9,8 +13,17 @@
   <p><%= link_to "Create a movie list", new_list_path, class:"create"%></p>
 
   <div class="container">
+
     <% @lists.each do |list| %>
-      <div class="card-list"><p><%= link_to "#{list.name }", list_path(list) %></p></div>
-    <% end %>
+
+      <div class="card-list">
+        <p><%= link_to "#{list.name }", list_path(list) %></p>
+        <div> <%= link_to list_path(list), method: :delete, data: { confirm: "You are about to delete the list #{list.name }. Are you sure?" }, class:"delete", title: "delete the list" do %><i class="fas fa-skull-crossbones"></i><% end %>
+        </div>
+        <div class="warning">delete the file</div>
+      </div>
+
   </div>
-</div>
+
+  <% end %>
+  </div>
