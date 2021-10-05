@@ -3,11 +3,10 @@
   </div>
 </div>
 <!-- form -->
-  <div class="form">
+  <div class="form new_form">
     <%= simple_form_for @list do |f| %>
-    <%= f.input :name %>
-    <%= f.button :submit %>
-    <%= link_to "back", lists_path %>
+      <%= f.input :name, label:"", placeholder:"type a category here" %>
+      <%= f.button :submit, class:"create new_create" %>
     <% end %>
   </div>
 <!-- form end -->
