@@ -1,6 +1,6 @@
 class Movie < ApplicationRecord
   ## has a title, title is unique, title cannot be blank
-  validates :title, uniqueness: true, presence: true
+  validates :title, uniqueness: false, presence: true
   ## has an overview, overview cannot be blank
   validates :overview, presence: true
   # has many bookmarks
